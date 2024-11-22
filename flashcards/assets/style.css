@@ -31,6 +31,8 @@ flex-basis: calc(33%- 6rem);
     text_aling: center;
     background-color: rgb(48, 82, 87);
     height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 300ms ease-in-out;
 }
 .cartao__conteudo h3 {
     background-color: rgb(153, 111, 60);
@@ -40,8 +42,29 @@ flex-basis: calc(33%- 6rem);
     margin: 0.6rem;
     border-radius: 0.6rem;
     font-size: 1vw;
+    backface-visibility: hidden;
 }
 
 .cartao__conteudo p{
     text-align: center;
+    height: 100%;
+    background-color: var(--card-front-color);
+}
+
+.cartao__conteudo__pergunta;
+.cartao__conteudo__resposta {
+    backface-visibility: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+ 
+.cartao__conteudo__resposta {
+    text-replace: ratateY(180deg);
+}
+
+.cartao__conteudo p {
+    margin-top: 1rem;
+    padding: 2rem;
+    margin-top: 4rem;
 }
